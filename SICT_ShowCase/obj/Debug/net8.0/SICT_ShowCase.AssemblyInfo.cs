@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SICT_ShowCase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bea5a0c61c20400388dd033a67fe0fc7ae0b4ec6")]
 [assembly: System.Reflection.AssemblyProductAttribute("SICT_ShowCase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SICT_ShowCase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

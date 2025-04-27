@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SICT_ShowCase.props" />
+</Project>

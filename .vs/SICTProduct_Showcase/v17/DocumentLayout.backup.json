@@ -1,12 +1,139 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICTProduct_Showcase\\",
-  "Documents": [],
+  "WorkspaceRootPath": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\sict_showcase\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|solutionrelative:sict_showcase\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\application\\mapping\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|solutionrelative:application\\mapping\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\application\\dtos\\userdtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|solutionrelative:application\\dtos\\userdtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EB02AF9-DC09-4AB7-B081-7F26D6ABE374}|Domain\\Domain.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EB02AF9-DC09-4AB7-B081-7F26D6ABE374}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\application\\dtos\\userdtos\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|solutionrelative:application\\dtos\\userdtos\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\application\\services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|solutionrelative:application\\services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D2B50FD-0B82-46C0-B6DA-BCC521313CEA}|Infrastructure\\Infrastructure.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\infrastructure\\repositories\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D2B50FD-0B82-46C0-B6DA-BCC521313CEA}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserMapper.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\Mapping\\UserMapper.cs",
+              "RelativeDocumentMoniker": "Application\\Mapping\\UserMapper.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\Mapping\\UserMapper.cs",
+              "RelativeToolTip": "Application\\Mapping\\UserMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T16:01:44.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T16:01:26.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\DTOs\\UserDTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\UserDTOs\\UserDto.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\DTOs\\UserDTOs\\UserDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\UserDTOs\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T16:01:04.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserCreateDto.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\DTOs\\UserDTOs\\UserCreateDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\UserDTOs\\UserCreateDto.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\DTOs\\UserDTOs\\UserCreateDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\UserDTOs\\UserCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T16:00:48.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Infrastructure\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Infrastructure\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\UnitOfWork\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:24:34.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\Services\\Implementations\\UserService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\Implementations\\UserService.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\Services\\Implementations\\UserService.cs",
+              "RelativeToolTip": "Application\\Services\\Implementations\\UserService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:22:19.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "SICT_ShowCase\\Controllers\\UserController.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\UserController.cs",
+              "RelativeToolTip": "SICT_ShowCase\\Controllers\\UserController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwEMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:21:58.304Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
