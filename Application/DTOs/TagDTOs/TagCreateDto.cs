@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.DTOs
+namespace Application.DTOs.TagDTOs
 {
-    public class RoleCreateDto
+    public class TagCreateDto
     {
-
+        public string Name { get; set; }
     }
 }
