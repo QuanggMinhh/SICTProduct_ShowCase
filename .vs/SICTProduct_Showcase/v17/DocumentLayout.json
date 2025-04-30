@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\sict_showcase\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|solutionrelative:sict_showcase\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\sict_showcase\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|solutionrelative:sict_showcase\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "SICT_ShowCase\\Controllers\\ProductController.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "SICT_ShowCase\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAIwEYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T18:14:36.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UserController.cs",
               "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "SICT_ShowCase\\Controllers\\UserController.cs",
@@ -34,12 +51,11 @@
               "RelativeToolTip": "SICT_ShowCase\\Controllers\\UserController.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAcwEcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T16:05:12.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T16:05:12.04Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\Services\\Implementations\\CategoryService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\Implementations\\CategoryService.cs",
@@ -47,18 +63,17 @@
               "RelativeToolTip": "Application\\Services\\Implementations\\CategoryService.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAmwCgAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T15:43:43.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T15:43:43.812Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "SICT_ShowCase\\Controllers\\CategoryController.cs",
               "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "SICT_ShowCase\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAqwCwAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAA2wCIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-28T15:43:23.265Z",
               "EditorCaption": ""
