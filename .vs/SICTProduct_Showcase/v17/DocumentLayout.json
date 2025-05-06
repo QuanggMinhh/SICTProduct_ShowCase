@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\application\\dtos\\productdtos\\productupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|solutionrelative:application\\dtos\\productdtos\\productupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\sict_showcase\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|solutionrelative:sict_showcase\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\sict_showcase\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|solutionrelative:sict_showcase\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\application\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|solutionrelative:application\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\application\\services\\implementations\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F03ED56-9A3B-438C-9385-B3BF0DD511E2}|Application\\Application.csproj|solutionrelative:application\\services\\implementations\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\sict_showcase\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81915D08-9129-434D-B20B-CAF3D31F7FEC}|SICT_ShowCase\\SICT_ShowCase.csproj|solutionrelative:sict_showcase\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D2B50FD-0B82-46C0-B6DA-BCC521313CEA}|Infrastructure\\Infrastructure.csproj|g:\\mydesktop\\datn\\sictproduct_showcase\\infrastructure\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D2B50FD-0B82-46C0-B6DA-BCC521313CEA}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,51 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "SICT_ShowCase\\Controllers\\ProductController.cs",
-              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "SICT_ShowCase\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAIwEYAAAAjAAAAAAAAAA==",
+              "Title": "ProductUpdateDto.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\DTOs\\ProductDTOs\\ProductUpdateDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\ProductDTOs\\ProductUpdateDto.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\DTOs\\ProductDTOs\\ProductUpdateDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\ProductDTOs\\ProductUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T18:14:36.519Z",
+              "WhenOpened": "2025-05-06T19:35:25.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\Services\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\Interfaces\\IProductService.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\Services\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "Application\\Services\\Interfaces\\IProductService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T19:31:16.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "SICT_ShowCase\\Controllers\\UserController.cs",
-              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\UserController.cs",
-              "RelativeToolTip": "SICT_ShowCase\\Controllers\\UserController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAcwEcAAAAJAAAAAAAAAA==",
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Infrastructure\\Repositories\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Infrastructure\\Repositories\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T16:05:12.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\Services\\Implementations\\CategoryService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\Implementations\\CategoryService.cs",
-              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\Application\\Services\\Implementations\\CategoryService.cs",
-              "RelativeToolTip": "Application\\Services\\Implementations\\CategoryService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAmwCgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T15:43:43.812Z"
+              "WhenOpened": "2025-05-06T19:29:00.087Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "SICT_ShowCase\\Controllers\\CategoryController.cs",
-              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "SICT_ShowCase\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA2wCIAAAAJAAAAAAAAAA==",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "SICT_ShowCase\\Controllers\\ProductController.cs",
+              "ToolTip": "G:\\MyDesktop\\DATN\\SICTProduct_Showcase\\SICT_ShowCase\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "SICT_ShowCase\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAUwD0AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T15:43:23.265Z",
+              "WhenOpened": "2025-05-06T19:28:49.866Z",
               "EditorCaption": ""
             }
           ]

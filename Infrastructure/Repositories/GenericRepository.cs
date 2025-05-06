@@ -18,22 +18,6 @@ namespace Infrastructure.Repositories
             _ShowCaseContext = showCaseContext;
         }
 
-        public async Task AddAsync(T entity)
-        {
-            await _ShowCaseContext.Set<T>().AddAsync(entity);
-        }
-
-        public Task Delete(T entity)
-        {
-            _ShowCaseContext.Set<T>().Remove(entity);
-            return Task.CompletedTask;
-        }
-
-        public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
-        {
-            return await _ShowCaseContext.Set<T>().Where(predicate).ToListAsync();
-        }
-
         public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _ShowCaseContext.Set<T>().ToListAsync();
@@ -44,10 +28,28 @@ namespace Infrastructure.Repositories
             return await _ShowCaseContext.Set<T>().FindAsync(id);
         }
 
+        public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _ShowCaseContext.Set<T>().Where(predicate).ToListAsync();
+        }
+
+        public async Task AddAsync(T entity)
+        {
+            await _ShowCaseContext.Set<T>().AddAsync(entity);
+        }
+
         public Task Update(T entity)
         {
             _ShowCaseContext.Entry(entity).State = EntityState.Modified;
             return Task.CompletedTask;
         }
+
+        public Task Delete(T entity)
+        {
+            _ShowCaseContext.Set<T>().Remove(entity);
+            return Task.CompletedTask;
+        }
+
+
     }
 }

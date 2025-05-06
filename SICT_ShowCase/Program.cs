@@ -16,6 +16,10 @@ builder.Services.AddTransient<ICategoryService, CategoryService>();
 builder.Services.AddTransient<ITagService, TagService>();
 builder.Services.AddTransient<IUploadFileService, UploadFileService>();
 builder.Services.AddTransient<IProductService,ProductService>();
+builder.Services.AddTransient<IAuthorService, AuthorService>();
+builder.Services.AddTransient<IProductAuthorService, ProductAuthorService>();
+builder.Services.AddTransient<IProductTagService, ProductTagService>();
+
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

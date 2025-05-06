@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Application.DTOs.CategoryDTOs
 {
-    public class CategoryUpdateDto
+    public class CategoryUpdateDto : CategoryCreateDto
     {
         public int Id { get; set; }
-        public string CategoryName { get; set; }
-        public string Description { get; set; }
     }
 }

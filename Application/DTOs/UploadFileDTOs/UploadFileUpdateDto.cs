@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Application.DTOs.UploadFileDTOs
 {
-    public class UploadFileUpdateDto
+    public class UploadFileUpdateDto : UploadFileCreateDto
     {
         public int Id { get; set; }
-        public string FileName { get; set; }
-        public byte[] Data { get; set; }
-        public string ContentType { get; set; }
-        public int ProductId { get; set; }
     }
 }

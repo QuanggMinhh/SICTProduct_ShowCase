@@ -16,7 +16,7 @@ namespace Infrastructure.Configurations
             builder.ToTable(nameof(UploadFile));
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
-            builder.HasOne(u=>u.Product).WithMany(p=>p.UploadFiles).HasForeignKey(x=>x.ProductId);
+            builder.HasOne(u=>u.Product).WithMany(p=>p.UploadFiles).HasForeignKey(x=>x.ProductId).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

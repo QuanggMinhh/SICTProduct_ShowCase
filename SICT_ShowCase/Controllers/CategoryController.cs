@@ -70,5 +70,23 @@ namespace SICT_ShowCase.Controllers
             await _categoryService.UpdateCategoryAsync(updateCategory);
             return Ok();
         }
+
+        [HttpGet("with-products")]
+        public async Task<IActionResult> GetCategoriesWithProducts()
+        {
+            var result = await _categoryService.GetCategoriesWithProductsAsync();
+            return Ok(result);
+        }
+
+        // GET: api/category/by-name/{name}
+        [HttpGet("by-name/{name}")]
+        public async Task<IActionResult> GetCategoryByName(string name)
+        {
+            var category = await _categoryService.GetCategoryByNameAsync(name);
+            if (category == null)
+                return NotFound();
+
+            return Ok(category);
+        }
     }
 }

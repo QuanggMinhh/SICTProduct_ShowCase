@@ -56,5 +56,20 @@ namespace Application.Services.Implementations
             await _unitOfWork.Tags.Update(tag);
             await _unitOfWork.SaveChangeAsync();
         }
+
+        public async Task<IEnumerable<Tag?>> GetTagByNameAsync(string tagName)
+        {
+            return await _unitOfWork.Tags.GetTagsByNameAsync(tagName);
+        }
+
+        public async Task<IEnumerable<Tag>> GetNewestTagsAsync(int count)
+        {
+            return await _unitOfWork.Tags.GetLatestTagsAsync(count);
+        }
+
+        public async Task<IEnumerable<Tag>> GetMostUsedTagsAsync(int count)
+        {
+            return await _unitOfWork.Tags.GetMostUsedTagsAsync(count);
+        }
     }
 }

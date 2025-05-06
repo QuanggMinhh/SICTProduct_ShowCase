@@ -15,7 +15,6 @@ namespace Application.DTOs.ProductDTOs
         public int CategoryId { get; set; }
         public string Status { get; set; }
         public int View { get; set; }
-        public string RejectReason { get; set; }
         public string Level { get; set; }
     }
 }

@@ -15,5 +15,18 @@ namespace Application.Services.Interfaces
         Task AddUserAsync(User user);
         Task DeleteUserAsync(int id);
         Task UpdateUserAsync(User user);
+        Task<User> FindByIdAsync(int id);
+
+        /// Lấy danh sách người dùng theo vai trò.
+        Task<IEnumerable<User>> GetUsersByRoleAsync(int roleId);
+
+        /// Tìm người dùng theo tên người dùng (UserName).
+        Task<User> GetUserByUserNameAsync(string userName);
+
+        /// Tìm người dùng theo email.
+        Task<User> GetUserByEmailAsync(string email);
+
+        /// Lấy danh sách người dùng có trạng thái hoạt động.
+        Task<IEnumerable<User>> GetActiveUsersAsync();
     }
 }

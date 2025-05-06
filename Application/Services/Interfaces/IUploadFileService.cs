@@ -1,4 +1,6 @@
-﻿using Domain.Entities;
+﻿using Application.DTOs.UploadFileDTOs;
+using Domain.Entities;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +12,17 @@ namespace Application.Services.Interfaces
     public interface IUploadFileService
     {
         Task<IEnumerable<UploadFile>> GetAllUploadFileAsync();
-        Task<UploadFile> GetUploadFileByIdAsync(int id);
         //Task<PageResultDto<UserDto>> GetUserPageAsync(int page, int pageSize);
         //IQueryable<User> GetUsersAsync(int id);
-        Task AddUploadFileAsync(UploadFile uploadFile);
         Task DeleteUploadFileAsync(int id);
         Task UpdateUploadFileAsync(UploadFile uploadFile);
+
+        Task UploadFileAsync(IFormFile file, int id);
+        Task<UploadFileUpdateDto> DownloadFileAsync(int id);
+        Task<List<UploadFileUpdateDto>> GetAllFileAsync();
+
+        Task<UploadFileUpdateDto?> GetFileByIdAsync(int id);
+
+        Task<List<UploadFileUpdateDto>> GetFilesByProductIdAsync(int productId);
     }
 }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.DTOs.RoleDTOs
+namespace Application.DTOs.AuthorDTOs
 {
-    public class RoleDto
+    public class AuthorUpdateDto : AuthorCreateDto
     {
+        public int Id { get; set; }
     }
 }

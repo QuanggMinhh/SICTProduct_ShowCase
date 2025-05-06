@@ -16,6 +16,8 @@ namespace Infrastructure.Repositories.UnitOfWork
         ITagRepository Tags { get; }
         IProductTagRepository ProductTags { get; }
         IUploadFileRepository UploadFiles { get; }
+        IAuthorRepository Authors { get; }
+        IProductAuthorRepository ProductAuthors { get; }
         Task<int> SaveChangeAsync();
     }
 }

@@ -9,5 +9,8 @@ namespace Infrastructure.Repositories.Interfaces
 {
     public interface ICategoryRepository : IGenericRepository<Category>
     {
+        Task<IEnumerable<Category>> GetCategoriesWithProductsAsync();
+
+        Task<Category?> GetCategoryByNameAsync(string categoryName);
     }
 }

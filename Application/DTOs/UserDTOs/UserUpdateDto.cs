@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Application.DTOs.UserDTOs
 {
-    internal class RoleUpdateDto
+    public class UserUpdateDto : UserCreateDto
     {
+        public int Id { get; set; }
+        public int Status { get; set; }
     }
 }

@@ -9,6 +9,6 @@ namespace Infrastructure.Repositories.Interfaces
 {
     public interface IRoleRepository : IGenericRepository<Role>
     {
-
+        Task<IEnumerable<Role>> GetAllRolesAsync();
     }
 }

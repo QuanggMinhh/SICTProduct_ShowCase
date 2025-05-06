@@ -14,5 +14,9 @@ namespace Application.Services.Interfaces
         Task AddTagAsync(Tag tag);
         Task DeleteTagAsync(int id);
         Task UpdateTagAsync(Tag tag);
+
+        Task<IEnumerable<Tag?>> GetTagByNameAsync(string tagName);
+        Task<IEnumerable<Tag>> GetNewestTagsAsync(int count);
+        Task<IEnumerable<Tag>> GetMostUsedTagsAsync(int count);
     }
 }

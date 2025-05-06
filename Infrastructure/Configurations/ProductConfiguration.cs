@@ -16,8 +16,8 @@ namespace Infrastructure.Configurations
             builder.ToTable(nameof(Product));
             builder.HasKey(p => p.Id);
             builder.Property(p => p.Id).UseIdentityColumn();
-            builder.HasOne(p=>p.User).WithMany(u=>u.Products).HasForeignKey(x=>x.ManagerId);
-            builder.HasOne(p=>p.Category).WithMany(c=>c.Products).HasForeignKey(x=>x.CategoryId);
+            builder.HasOne(p=>p.User).WithMany(u=>u.Products).HasForeignKey(x=>x.ManagerId).OnDelete(DeleteBehavior.Restrict);
+            builder.HasOne(p=>p.Category).WithMany(c=>c.Products).HasForeignKey(x=>x.CategoryId).OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

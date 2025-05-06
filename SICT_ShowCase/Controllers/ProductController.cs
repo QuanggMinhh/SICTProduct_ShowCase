@@ -70,5 +70,38 @@ namespace SICT_ShowCase.Controllers
             await _productService.UpdateProductAsync(updateProduct);
             return Ok(updateProduct);
         }
+
+        [HttpGet("by-category/{categoryId}")]
+        public async Task<IActionResult> GetProductsByCategory(int categoryId)
+        {
+            var products = await _productService.GetProductsByCategoryIdAsync(categoryId);
+            var productDto = _mapper.Map<IEnumerable<ProductUpdateDto>>(products);
+            return Ok(productDto);
+        }
+
+        [HttpGet("by-status/{status}")]
+        public async Task<IActionResult> GetProductsByStatus(string status)
+        {
+            var products = await _productService.GetProductsByStatusAsync(status);
+            var productDto = _mapper.Map<IEnumerable<ProductUpdateDto>>(products);
+            return Ok(productDto);
+        }
+
+        [HttpGet("most-viewed/{count}")]
+        public async Task<IActionResult> GetMostViewedProduct(int count)
+        {
+            var products = await _productService.GetMostViewedProductsAsync(count);
+            var productDto = _mapper.Map<IEnumerable<ProductUpdateDto>>(products);
+            return Ok(productDto);
+        }
+
+        [HttpGet("details/{id}")]
+        public async Task<IActionResult> GetDetails(int id)
+        {
+            var product = await _productService.GetProductDetailsAsync(id);
+            if (product == null) return NotFound();
+            var productDto = _mapper.Map<ProductUpdateDto>(product);
+            return Ok(productDto);
+        }
     }
 }

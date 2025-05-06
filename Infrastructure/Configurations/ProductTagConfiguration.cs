@@ -15,8 +15,8 @@ namespace Infrastructure.Configurations
         {
             builder.ToTable(nameof(ProductTag));
             builder.HasKey(p=>new { p.ProductId, p.TagId });
-            builder.HasOne(pt=>pt.Product).WithMany(p=>p.ProductTags).HasForeignKey(x=>x.ProductId);
-            builder.HasOne(pt=>pt.Tag).WithMany(t=> t.ProductTags).HasForeignKey(x=>x.TagId);
+            builder.HasOne(pt=>pt.Product).WithMany(p=>p.ProductTags).HasForeignKey(x=>x.ProductId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(pt=>pt.Tag).WithMany(t=> t.ProductTags).HasForeignKey(x=>x.TagId).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

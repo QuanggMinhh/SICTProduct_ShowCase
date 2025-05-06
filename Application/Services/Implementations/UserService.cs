@@ -36,14 +36,41 @@ namespace Application.Services.Implementations
             }
         }
 
+        public async Task<User> FindByIdAsync(int id)
+        {
+            return await _unitOfWork.Users.FindByIdAsync(id);
+        }
+
+        public Task<IEnumerable<User>> GetActiveUsersAsync()
+        {
+            return _unitOfWork.Users.GetActiveUsersAsync();
+        }
+
         public async Task<IEnumerable<User>> GetAllUserAsync()
         {
             return await _unitOfWork.Users.GetAllAsync();
         }
+
+        public async Task<User> GetUserByEmailAsync(string email)
+        {
+            return await _unitOfWork.Users.GetUserByEmailAsync(email);  
+        }
+
         public async Task<User> GetUserByIdAsync(int id)
         {
             return await _unitOfWork.Users.FindByIdAsync(id);
         }
+
+        public async Task<User> GetUserByUserNameAsync(string userName)
+        {
+            return await _unitOfWork.Users.GetUserByUserNameAsync(userName);    
+        }
+
+        public async Task<IEnumerable<User>> GetUsersByRoleAsync(int roleId)
+        {
+            return await _unitOfWork.Users.GetUsersByRoleAsync(roleId);
+        }
+
         public async Task UpdateUserAsync(User user)
         {
             user.UpdatedAt = DateTime.Now;

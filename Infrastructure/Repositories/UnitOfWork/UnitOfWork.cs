@@ -23,6 +23,8 @@ namespace Infrastructure.Repositories.UnitOfWork
             Tags = new TagRepository(_context);
             UploadFiles = new UploadFileRepository(_context);
             ProductTags = new ProductTagRepository(_context);
+            ProductAuthors = new ProductAuthorRepository(_context);
+            Authors = new AuthorRepository(_context);
 
         }
         public IUserRepository Users { get; }
@@ -38,6 +40,9 @@ namespace Infrastructure.Repositories.UnitOfWork
         public IProductTagRepository ProductTags { get; }
 
         public IUploadFileRepository UploadFiles { get; }
+
+        public IProductAuthorRepository ProductAuthors { get; }
+        public IAuthorRepository Authors { get; }
 
         public void Dispose()
         {

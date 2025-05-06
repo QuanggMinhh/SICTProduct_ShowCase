@@ -9,5 +9,8 @@ namespace Infrastructure.Repositories.Interfaces
 {
     public interface IUploadFileRepository : IGenericRepository<UploadFile>
     {
+        Task<List<UploadFile>> GetFilesByProductIdAsync(int productId);
+        Task<List<UploadFile>> GetAllFileAsync();
+
     }
 }

@@ -50,5 +50,31 @@ namespace Application.Services.Implementations
             await _unitOfWork.Products.Update(product);
             await _unitOfWork.SaveChangeAsync();
         }
+
+        public async Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(int categoryId)
+        {
+            return await _unitOfWork.Products.GetProductsByCategoryAsync(categoryId);
+        }
+
+
+        public async Task<IEnumerable<Product>> GetNewestProductsAsync(int count)
+        {
+            return await _unitOfWork.Products.GetMostViewedProductsAsync(count);
+        }
+
+        public async Task<IEnumerable<Product>> GetMostViewedProductsAsync(int count)
+        {
+            return await _unitOfWork.Products.GetMostViewedProductsAsync(count);
+        }
+
+        public async Task<IEnumerable<Product>> GetProductsByStatusAsync(string status)
+        {
+            return await _unitOfWork.Products.GetProductsByStatusAsync(status);
+        }
+
+        public async Task<Product?> GetProductDetailsAsync(int id)
+        {
+            return await _unitOfWork.Products.GetProductDetailsAsync(id);
+        }
     }
 }

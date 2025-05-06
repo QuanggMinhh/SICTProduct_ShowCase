@@ -15,5 +15,10 @@ namespace Application.Services.Interfaces
         Task AddProductAsync(Product product);
         Task DeleteProductAsync(int id);
         Task UpdateProductAsync(Product product);
+
+        Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(int categoryId);
+        Task<IEnumerable<Product>> GetProductsByStatusAsync(string status);
+        Task<IEnumerable<Product>> GetMostViewedProductsAsync(int count);
+        Task<Product?> GetProductDetailsAsync(int id);
     }
 }

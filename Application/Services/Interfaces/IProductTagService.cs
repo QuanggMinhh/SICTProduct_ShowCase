@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.DTOs.UploadFileDTOs
+namespace Application.Services.Interfaces
 {
-    public class UploadFileDto
+    public interface IProductTagService
     {
     }
 }

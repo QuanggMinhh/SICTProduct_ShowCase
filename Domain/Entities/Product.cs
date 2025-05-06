@@ -16,12 +16,15 @@ namespace Domain.Entities
         public int CategoryId { get; set; }
         public string Status { get; set; }
         public int View { get; set; }
-        public string RejectReason { get; set; }
+        public string? RejectReason { get; set; }
         public string Level { get; set; }
+
         [JsonIgnore]
         public User User { get; set; }
-        //[JsonIgnore]
+
+        [JsonIgnore]
         public Category Category { get; set; }
+        public List<ProductAuthor> ProductAuthors { get; set; } = new();
         public List<ProductTag> ProductTags { get; set; } = new();
         public List<UploadFile> UploadFiles { get; set; } = new();
     }

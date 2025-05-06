@@ -57,7 +57,7 @@ namespace SICT_ShowCase.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> UpdateUser(UserDto userDto)
+        public async Task<ActionResult> UpdateUser(UserUpdateDto userDto)
         {
 
             var user = await _userService.GetUserByIdAsync(userDto.Id);

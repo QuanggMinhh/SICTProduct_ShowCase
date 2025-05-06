@@ -15,5 +15,6 @@ namespace Application.Services.Interfaces
         Task AddRoleAsync(Role role);
         Task DeleteRoleAsync(int id);
         Task UpdateRoleAsync(Role role);
+
     }
 }

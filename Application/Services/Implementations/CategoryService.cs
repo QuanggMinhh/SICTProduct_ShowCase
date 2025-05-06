@@ -53,5 +53,15 @@ namespace Application.Services.Implementations
             await _unitOfWork.Categories.Update(category);
             await _unitOfWork.SaveChangeAsync();
         }
+
+        public async Task<Category?> GetCategoryByNameAsync(string categoryName)
+        {
+            return await _unitOfWork.Categories.GetCategoryByNameAsync(categoryName);
+        }
+
+        public async Task<IEnumerable<Category>> GetCategoriesWithProductsAsync()
+        {
+            return await _unitOfWork.Categories.GetCategoriesWithProductsAsync();
+        }
     }
 }

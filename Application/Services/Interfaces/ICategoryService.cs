@@ -15,5 +15,8 @@ namespace Application.Services.Interfaces
         Task AddCategoryAsync(Category category);
         Task DeleteCategoryAsync(int id);
         Task UpdateCategoryAsync(Category category);
+
+        Task<IEnumerable<Category>> GetCategoriesWithProductsAsync();
+        Task<Category?> GetCategoryByNameAsync(string categoryName);
     }
 }
