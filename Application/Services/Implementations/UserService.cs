@@ -1,6 +1,7 @@
 ﻿using Application.Services.Interfaces;
 using Domain.Entities;
 using Infrastructure.Repositories.UnitOfWork;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,19 @@ namespace Application.Services.Implementations
             user.RoleId = _unitOfWork.Roles.GetByIdAsync(2).Result.Id;
             await _unitOfWork.Users.AddUserAsync(user);
             await _unitOfWork.SaveChangeAsync();
+        }
+
+        public async Task<User> Authenticate(string username, string password)
+        {
+            var user = await _unitOfWork.Users.Authenticate(username, password);
+            if (user == null)
+            {
+                return null;
+            } else if(user.Password != password) 
+            {
+                return null;
+            }
+            return user;
         }
 
         public async Task DeleteUserAsync(int id)

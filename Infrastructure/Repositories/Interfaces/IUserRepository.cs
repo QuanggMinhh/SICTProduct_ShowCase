@@ -23,5 +23,7 @@ namespace Infrastructure.Repositories.Interfaces
 
         /// Lấy danh sách người dùng có trạng thái hoạt động.
         Task<IEnumerable<User>> GetActiveUsersAsync();
+
+        Task<User> Authenticate(string username, string password);
     }
 }

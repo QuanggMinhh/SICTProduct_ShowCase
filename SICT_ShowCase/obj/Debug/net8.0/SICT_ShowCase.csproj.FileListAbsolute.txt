@@ -160,3 +160,4 @@ G:\MyDesktop\DATN\SICTProduct_Showcase\SICT_ShowCase\obj\Debug\net8.0\ref\SICT_S
 G:\MyDesktop\DATN\SICTProduct_Showcase\SICT_ShowCase\bin\Debug\net8.0\AutoMapper.dll
 G:\MyDesktop\DATN\SICTProduct_Showcase\SICT_ShowCase\bin\Debug\net8.0\Application.dll
 G:\MyDesktop\DATN\SICTProduct_Showcase\SICT_ShowCase\bin\Debug\net8.0\Application.pdb
+G:\MyDesktop\DATN\SICTProduct_Showcase\SICT_ShowCase\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

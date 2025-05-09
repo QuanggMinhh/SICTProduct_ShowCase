@@ -84,5 +84,11 @@ namespace Infrastructure.Repositories.Implementation
                 .Where(u => u.Status == 1)  //"1" là trạng thái hoạt động
                 .ToListAsync();
         }
+
+        public async Task<User> Authenticate(string username, string password)
+        {
+            var user = await _ShowCaseContext.Users.Include(x=>x.Role).FirstOrDefaultAsync(u=>u.UserName==username && u.Password==password);
+            return user;
+        }
     }
 }

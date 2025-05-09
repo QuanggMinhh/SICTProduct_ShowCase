@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "SICT_ShowCase.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "Application.DTOs.LoginDTOs.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SICT_ShowCase.Controllers.AuthorController",
     "Method": "GetAllAuthor",
     "RelativePath": "api/Author",
