@@ -15,12 +15,16 @@ namespace SICT_ShowCase.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
+        private readonly ITagService _tagService;
+        private readonly IProductAuthorService _productAuthorService;
         private readonly IMapper _mapper;
 
-        public ProductController(IProductService productService, IMapper mapper)
+        public ProductController(IProductService productService, IMapper mapper, ITagService tagService, IProductAuthorService productAuthorService)
         {
             _productService = productService;
             _mapper = mapper;
+            _tagService = tagService;
+            _productAuthorService = productAuthorService;
         }
 
         [HttpPost("add-product")]
@@ -34,7 +38,15 @@ namespace SICT_ShowCase.Controllers
         public async Task<IActionResult> GetAllProduct()
         {
             var products = await _productService.GetAllProductAsync();
-            var productDto = _mapper.Map<IEnumerable<Product>>(products);
+            foreach (var item in products)
+            {
+                item.ProductAuthors.ForEach(async x =>
+                {
+                    var author = await _productAuthorService.GetAuthorsByProductIdAsync(x.ProductId);
+                    x.Author = (Author)author;
+                });
+            }
+            var productDto = _mapper.Map<IEnumerable<ProductUpdateDto>>(products);
             return Ok(productDto);
         }
 

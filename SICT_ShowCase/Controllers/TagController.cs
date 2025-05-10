@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SICT_ShowCase.Controllers
 {
-    [Authorize]
-    [Authorize(Roles = "Admin")]
+    //[Authorize]
+    //[Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class TagController : ControllerBase
@@ -28,7 +28,7 @@ namespace SICT_ShowCase.Controllers
         public async Task<IActionResult> GetAllTags()
         {
             var tags = await _tagService.GetAllTagAsync();
-            var tagDto = _mapper.Map<IEnumerable<Tag>>(tags);
+            var tagDto = _mapper.Map<IEnumerable<TagUpdateDto>>(tags);
             return Ok(tagDto);
         }
 
@@ -56,7 +56,7 @@ namespace SICT_ShowCase.Controllers
         public async Task<IActionResult> GetNewestTags()
         {
             var tags = await _tagService.GetNewestTagsAsync(5);
-            var tagDto = _mapper.Map<IEnumerable<Tag>>(tags);
+            var tagDto = _mapper.Map<IEnumerable<TagUpdateDto>>(tags);
             return Ok(tagDto);
         }
 
@@ -65,7 +65,7 @@ namespace SICT_ShowCase.Controllers
         public async Task<IActionResult> GetMostUsedTags()
         {
             var tags = await _tagService.GetMostUsedTagsAsync(5);
-            var tagDto = _mapper.Map<IEnumerable<Tag>>(tags);
+            var tagDto = _mapper.Map<IEnumerable<TagUpdateDto>>(tags);
             return Ok(tagDto);
         }
 

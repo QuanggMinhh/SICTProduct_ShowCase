@@ -10,8 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SICT_ShowCase.Controllers
 {
-    [Authorize]
-    [Authorize(Roles = "Admin")]
+    //[Authorize]
+    //[Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoryController : ControllerBase
@@ -29,7 +29,7 @@ namespace SICT_ShowCase.Controllers
         {
 
             var category = await _categoryService.GetCategoryByIdAsync(id);
-            var categoryDto = _mapper.Map<CategoryCreateDto>(category);
+            var categoryDto = _mapper.Map<CategoryUpdateDto>(category);
             return Ok(categoryDto);
         }
 
@@ -45,7 +45,7 @@ namespace SICT_ShowCase.Controllers
         public async Task<ActionResult> GetAllCategoryAsync()
         {
             var category = await _categoryService.GetAllCategoryAsync();
-            var categoryDto = _mapper.Map<IEnumerable<CategoryCreateDto>>(category);
+            var categoryDto = _mapper.Map<IEnumerable<CategoryUpdateDto>>(category);
             return Ok(categoryDto);
         }
         [HttpDelete("{id}")]

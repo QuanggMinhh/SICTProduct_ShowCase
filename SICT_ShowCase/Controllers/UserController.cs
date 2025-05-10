@@ -28,7 +28,7 @@ namespace SICT_ShowCase.Controllers
         {
 
             var user = await _userService.GetUserByIdAsync(id);
-            var userDto = _mapper.Map<UserCreateDto>(user);
+            var userDto = _mapper.Map<UserUpdateDto>(user);
             return Ok(userDto);
         }
 
@@ -44,7 +44,7 @@ namespace SICT_ShowCase.Controllers
         public async Task<ActionResult> GetAllUserAsync()
         {
             var user = await _userService.GetAllUserAsync();
-            var userDto = _mapper.Map<IEnumerable<UserCreateDto>>(user);
+            var userDto = _mapper.Map<IEnumerable<UserUpdateDto>>(user);
             return Ok(userDto);
         }
         [HttpDelete("{id}")]

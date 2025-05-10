@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SICT_ShowCase.Controllers
 {
-    [Authorize]
-    [Authorize(Roles = "Admin")]
+    //[Authorize]
+    //[Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthorController : ControllerBase
