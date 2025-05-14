@@ -8,7 +8,8 @@ namespace Application.DTOs.ProductDTOs
 {
     public class ProductUpdateDto : ProductCreateDto
     {
-        public int Id { get; set; } 
-        public string RejectReason { get; set; }
+        public int Id { get; set; }
+        //public string RejectReason { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

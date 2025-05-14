@@ -14,6 +14,7 @@ namespace Application.Services.Interfaces
         Task<IEnumerable<UploadFile>> GetAllUploadFileAsync();
         //Task<PageResultDto<UserDto>> GetUserPageAsync(int page, int pageSize);
         //IQueryable<User> GetUsersAsync(int id);
+        Task<UploadFile> GetUploadFileByIdAsync(int id);
         Task DeleteUploadFileAsync(int id);
         Task UpdateUploadFileAsync(UploadFile uploadFile);
 

@@ -238,6 +238,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SICT_ShowCase.Controllers.ContactController",
+    "Method": "GetAllContacts",
+    "RelativePath": "api/Contact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SICT_ShowCase.Controllers.ContactController",
+    "Method": "CreateContact",
+    "RelativePath": "api/Contact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.ContactDTOs.ContactDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SICT_ShowCase.Controllers.ContactController",
+    "Method": "UpdateContact",
+    "RelativePath": "api/Contact",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.ContactDTOs.ContactDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SICT_ShowCase.Controllers.ContactController",
+    "Method": "GetContactById",
+    "RelativePath": "api/Contact/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SICT_ShowCase.Controllers.ContactController",
+    "Method": "DeleteContact",
+    "RelativePath": "api/Contact/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SICT_ShowCase.Controllers.ProductController",
     "Method": "GetAllProduct",
     "RelativePath": "api/Product",
@@ -256,7 +330,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productUpdateDto",
+        "Name": "productDto",
         "Type": "Application.DTOs.ProductDTOs.ProductUpdateDto",
         "IsRequired": true
       }
@@ -304,11 +378,21 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productCreateDto",
+        "Name": "productDto",
         "Type": "Application.DTOs.ProductDTOs.ProductCreateDto",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SICT_ShowCase.Controllers.ProductController",
+    "Method": "GetAllProductInAdmin",
+    "RelativePath": "api/Product/admin-listproduct",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -361,6 +445,16 @@
   },
   {
     "ContainingType": "SICT_ShowCase.Controllers.ProductController",
+    "Method": "GetAllFeaturedProduct",
+    "RelativePath": "api/Product/featured-product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SICT_ShowCase.Controllers.ProductController",
     "Method": "GetMostViewedProduct",
     "RelativePath": "api/Product/most-viewed/{count}",
     "HttpMethod": "GET",
@@ -371,6 +465,32 @@
         "Name": "count",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SICT_ShowCase.Controllers.ProductController",
+    "Method": "SearchProductByCategoryTagLevel",
+    "RelativePath": "api/Product/search-product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "tagId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "level",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -564,6 +684,22 @@
     "Method": "GetFileById",
     "RelativePath": "api/UploadFile/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SICT_ShowCase.Controllers.UploadFileController",
+    "Method": "DeleteFile",
+    "RelativePath": "api/UploadFile/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

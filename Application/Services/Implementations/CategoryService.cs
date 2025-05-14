@@ -1,4 +1,5 @@
-﻿using Application.Services.Interfaces;
+﻿using Application.DTOs.CategoryDTOs;
+using Application.Services.Interfaces;
 using Domain.Entities;
 using Infrastructure.Repositories.UnitOfWork;
 using System;
@@ -36,9 +37,18 @@ namespace Application.Services.Implementations
             }
         }
 
-        public async Task<IEnumerable<Category>> GetAllCategoryAsync()
+        public async Task<IEnumerable<CategoryUpdateDto>> GetAllCategoryAsync()
         {
-            return await _unitOfWork.Categories.GetAllAsync();
+            var categories = await _unitOfWork.Categories.GetAllWithProductCountAsync();
+
+            return categories.Select(c => new CategoryUpdateDto
+            {
+                Id = c.Id,
+                CategoryName = c.CategoryName,
+                Description = c.Description,
+                CreatedAt = c.CreatedAt,
+                ProductCount = c.Products?.Count ?? 0
+            }).ToList();
         }
 
         public async Task<Category> GetCategoryByIdAsync(int id)

@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Application.DTOs.CategoryDTOs;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Application.Services.Interfaces
 {
     public interface ICategoryService
     {
-        Task<IEnumerable<Category>> GetAllCategoryAsync();
+        Task<IEnumerable<CategoryUpdateDto>> GetAllCategoryAsync();
         Task<Category> GetCategoryByIdAsync(int id);
         //Task<PageResultDto<UserDto>> GetUserPageAsync(int page, int pageSize);
         Task AddCategoryAsync(Category category);

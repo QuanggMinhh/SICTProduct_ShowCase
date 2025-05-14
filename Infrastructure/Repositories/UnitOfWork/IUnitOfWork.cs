@@ -18,6 +18,8 @@ namespace Infrastructure.Repositories.UnitOfWork
         IUploadFileRepository UploadFiles { get; }
         IAuthorRepository Authors { get; }
         IProductAuthorRepository ProductAuthors { get; }
+
+        IContactRepository Contacts { get; }
         Task<int> SaveChangeAsync();
     }
 }

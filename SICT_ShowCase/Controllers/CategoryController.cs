@@ -38,15 +38,18 @@ namespace SICT_ShowCase.Controllers
         {
             var category = _mapper.Map<Category>(categoryDto);
             await _categoryService.AddCategoryAsync(category);
-            return Ok();
+            return Ok(category);
         }
 
         [HttpGet]
         public async Task<ActionResult> GetAllCategoryAsync()
         {
             var category = await _categoryService.GetAllCategoryAsync();
-            var categoryDto = _mapper.Map<IEnumerable<CategoryUpdateDto>>(category);
-            return Ok(categoryDto);
+            if(category ==null)
+            {
+                return NotFound();
+            }
+            return Ok(category);
         }
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteCategory(int id)
@@ -57,7 +60,7 @@ namespace SICT_ShowCase.Controllers
                 return BadRequest();
             }
             await _categoryService.DeleteCategoryAsync(category.Id);
-            return Ok();
+            return Ok(category);
         }
 
         [HttpPut]
@@ -71,7 +74,7 @@ namespace SICT_ShowCase.Controllers
             }
             var updateCategory = _mapper.Map<Category>(categoryDto);
             await _categoryService.UpdateCategoryAsync(updateCategory);
-            return Ok();
+            return Ok(category);
         }
 
         [HttpGet("with-products")]

@@ -16,5 +16,6 @@ namespace Application.DTOs.AuthorDTOs
         public string Position { get; set; }
         public string AvatarUrl { get; set; }
         public bool IsStudent { get; set; }
+        public DateTime CreateAt { get; set; }
     }
 }

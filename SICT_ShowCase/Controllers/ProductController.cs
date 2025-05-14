@@ -17,43 +17,75 @@ namespace SICT_ShowCase.Controllers
         private readonly IProductService _productService;
         private readonly ITagService _tagService;
         private readonly IProductAuthorService _productAuthorService;
+        private readonly IProductTagService _productTagService;
+        private readonly IUploadFileService _uploadFileService;
         private readonly IMapper _mapper;
 
-        public ProductController(IProductService productService, IMapper mapper, ITagService tagService, IProductAuthorService productAuthorService)
+        public ProductController(IProductService productService, IMapper mapper, ITagService tagService, IProductAuthorService productAuthorService, IUploadFileService uploadFileService, IProductTagService productTagService)
         {
             _productService = productService;
             _mapper = mapper;
             _tagService = tagService;
             _productAuthorService = productAuthorService;
+            _uploadFileService = uploadFileService;
+            _productTagService = productTagService;
         }
 
         [HttpPost("add-product")]
-        public async Task<IActionResult> AddProduct(ProductCreateDto productCreateDto)
+        public async Task<IActionResult> AddProduct([FromBody] ProductCreateDto productDto)
         {
-            var product = _mapper.Map<Product>(productCreateDto);
-            await _productService.AddProductAsync(product);
-            return Ok(product);
+            var product = await _productService.AddProductAsync(productDto);
+            var pd = _mapper.Map<ProductDetailDto>(product);
+            return Ok(pd);
         }
         [HttpGet]
         public async Task<IActionResult> GetAllProduct()
         {
             var products = await _productService.GetAllProductAsync();
-            foreach (var item in products)
+            if(products == null)
             {
-                item.ProductAuthors.ForEach(async x =>
-                {
-                    var author = await _productAuthorService.GetAuthorsByProductIdAsync(x.ProductId);
-                    x.Author = (Author)author;
-                });
+                return NotFound();
             }
-            var productDto = _mapper.Map<IEnumerable<ProductUpdateDto>>(products);
-            return Ok(productDto);
+            return Ok(products);
+        }
+
+        [HttpGet("admin-listproduct")]
+        public async Task<IActionResult> GetAllProductInAdmin()
+        {
+            var products = await _productService.GetAllProductInAdminAsync();
+            if (products == null)
+            {
+                return NotFound();
+            }
+            return Ok(products);
+        }
+
+        [HttpGet("featured-product")]
+        public async Task<IActionResult> GetAllFeaturedProduct()
+        {
+            var products = await _productService.GetAllFeatureProductAsync();
+            if (products == null)
+            {
+                return NotFound();
+            }
+            return Ok(products);
+        }
+
+        [HttpGet("search-product")]
+        public async Task<IActionResult> SearchProductByCategoryTagLevel([FromQuery] int? categoryId, [FromQuery] int? tagId, [FromQuery] string? level)
+        {
+            var products = await _productService.SearchProductAsync(categoryId,tagId,level);
+            if (!products.Any())
+            {
+                return Ok("Không tìm thấy sản phẩm phù hợp.");
+            }
+            return Ok(products);
         }
 
         [HttpGet("{Id}")]
         public async Task<IActionResult> GetProductById(int Id)
         {
-            var product = await _productService.GetProductByIdAsync(Id);
+            var product = await _productService.GetProductDetailsAsync(Id);
             if (product == null)
             {
                 return NotFound();
@@ -74,14 +106,18 @@ namespace SICT_ShowCase.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateProduct(ProductUpdateDto productUpdateDto)
+        public async Task<IActionResult> UpdateProduct(ProductUpdateDto productDto)
         {
-            var product = await _productService.GetProductByIdAsync(productUpdateDto.Id);
+            //if(productUpdateDto.Status == "Đã duyệt" || productUpdateDto.Status == "Chờ duyệt")
+            //{
+            //    productUpdateDto.RejectReason = "";
+            //}
+            var product = await _productService.GetProductByIdAsync(productDto.Id);
             if (product == null)
             {
                 return NotFound();
             }
-            var updateProduct = _mapper.Map<Product>(productUpdateDto);
+            var updateProduct = _mapper.Map<Product>(productDto);
             await _productService.UpdateProductAsync(updateProduct);
             return Ok(updateProduct);
         }
@@ -89,16 +125,19 @@ namespace SICT_ShowCase.Controllers
         [HttpGet("by-category/{categoryId}")]
         public async Task<IActionResult> GetProductsByCategory(int categoryId)
         {
-            var products = await _productService.GetProductsByCategoryIdAsync(categoryId);
-            var productDto = _mapper.Map<IEnumerable<ProductUpdateDto>>(products);
-            return Ok(productDto);
+            var products =  await _productService.GetProductsByCategoryIdAsync(categoryId);
+            if(products == null)
+            {
+                return NotFound();
+            }
+            return Ok(products);
         }
 
         [HttpGet("by-status/{status}")]
         public async Task<IActionResult> GetProductsByStatus(string status)
         {
             var products = await _productService.GetProductsByStatusAsync(status);
-            var productDto = _mapper.Map<IEnumerable<ProductUpdateDto>>(products);
+            var productDto = _mapper.Map<IEnumerable<ProductDetailDto>>(products);
             return Ok(productDto);
         }
 

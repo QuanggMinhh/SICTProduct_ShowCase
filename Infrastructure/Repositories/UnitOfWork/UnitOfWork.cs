@@ -25,6 +25,7 @@ namespace Infrastructure.Repositories.UnitOfWork
             ProductTags = new ProductTagRepository(_context);
             ProductAuthors = new ProductAuthorRepository(_context);
             Authors = new AuthorRepository(_context);
+            Contacts = new ContactRepository(_context);
 
         }
         public IUserRepository Users { get; }
@@ -43,6 +44,8 @@ namespace Infrastructure.Repositories.UnitOfWork
 
         public IProductAuthorRepository ProductAuthors { get; }
         public IAuthorRepository Authors { get; }
+
+        public IContactRepository Contacts { get; }
 
         public void Dispose()
         {

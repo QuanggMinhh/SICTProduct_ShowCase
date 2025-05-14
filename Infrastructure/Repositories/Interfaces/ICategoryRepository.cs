@@ -12,5 +12,7 @@ namespace Infrastructure.Repositories.Interfaces
         Task<IEnumerable<Category>> GetCategoriesWithProductsAsync();
 
         Task<Category?> GetCategoryByNameAsync(string categoryName);
+
+        Task<IEnumerable<Category>> GetAllWithProductCountAsync();
     }
 }

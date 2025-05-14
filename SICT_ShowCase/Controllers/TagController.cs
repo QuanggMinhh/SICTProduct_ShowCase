@@ -78,7 +78,7 @@ namespace SICT_ShowCase.Controllers
 
             var tag = _mapper.Map<Tag>(dto);
             await _tagService.AddTagAsync(tag);
-            return Ok();
+            return Ok(tag);
         }
 
         // PUT: api/tag/{id}
@@ -92,7 +92,7 @@ namespace SICT_ShowCase.Controllers
             var tag = _mapper.Map<Tag>(dto);
             await _tagService.UpdateTagAsync(tag);
 
-            return Ok();
+            return Ok(tag);
         }
 
         // DELETE: api/tag/{id}

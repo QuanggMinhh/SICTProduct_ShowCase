@@ -9,5 +9,6 @@ namespace Application.DTOs.UploadFileDTOs
     public class UploadFileUpdateDto : UploadFileCreateDto
     {
         public int Id { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

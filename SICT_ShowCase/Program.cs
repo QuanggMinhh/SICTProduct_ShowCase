@@ -36,6 +36,7 @@ builder.Services.AddTransient<IProductService,ProductService>();
 builder.Services.AddTransient<IAuthorService, AuthorService>();
 builder.Services.AddTransient<IProductAuthorService, ProductAuthorService>();
 builder.Services.AddTransient<IProductTagService, ProductTagService>();
+builder.Services.AddTransient<IContactService, ContactService>();
 
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -117,7 +118,7 @@ app.UseAuthorization();
 //if (app.Environment.IsDevelopment())
 //{
 app.UseSwagger();
-    app.UseSwaggerUI();
+app.UseSwaggerUI();
 //}
 
 app.UseHttpsRedirection();

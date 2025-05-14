@@ -22,5 +22,13 @@ namespace Infrastructure.Repositories.Interfaces
 
         /// Lấy sản phẩm theo ID và bao gồm các thông tin chi tiết (category, tags, files...).
         Task<Product?> GetProductDetailsAsync(int productId);
+
+        Task<IEnumerable<Product>> GetAllProductDetail();
+
+        Task<IEnumerable<Product>> GetAllFeatureProductDetail();
+
+        Task<IEnumerable<Product>> GetAllProductInAdmin();
+
+        Task<IEnumerable<Product>> SearchProductByCategoryTagLevel(int? categoryId, int? tagId, string? level);
     }
 }

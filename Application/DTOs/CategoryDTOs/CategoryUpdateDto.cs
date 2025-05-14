@@ -9,5 +9,7 @@ namespace Application.DTOs.CategoryDTOs
     public class CategoryUpdateDto : CategoryCreateDto
     {
         public int Id { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public int ProductCount { get; set; }
     }
 }

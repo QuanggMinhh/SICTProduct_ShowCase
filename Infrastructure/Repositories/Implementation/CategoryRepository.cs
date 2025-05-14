@@ -14,6 +14,14 @@ namespace Infrastructure.Repositories.Implementation
     {
         public CategoryRepository(SICT_ShowCaseContext showCaseContext) : base(showCaseContext)
         {
+
+        }
+
+        public async Task<IEnumerable<Category>> GetAllWithProductCountAsync()
+        {
+            return await _ShowCaseContext.Categories
+                .Include(c => c.Products)
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<Category>> GetCategoriesWithProductsAsync()

@@ -9,5 +9,6 @@ namespace Application.DTOs.AuthorDTOs
     public class AuthorUpdateDto : AuthorCreateDto
     {
         public int Id { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

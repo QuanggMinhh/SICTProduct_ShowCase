@@ -9,5 +9,6 @@ namespace Application.DTOs.TagDTOs
     public class TagCreateDto
     {
         public string Name { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

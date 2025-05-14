@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(SICT_ShowCaseContext))]
-    [Migration("20250506174020_init")]
-    partial class init
+    [Migration("20250512173948_init2")]
+    partial class init2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -80,70 +80,70 @@ namespace Infrastructure.Migrations
                             Id = 1,
                             AcademicTitle = "GS",
                             AvatarUrl = "/images/author1.jpg",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6740),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6084),
                             Degree = "TS",
                             Email = "nguyenvana@example.com",
-                            FullName = "Nguyễn Văn A",
+                            FullName = "Đặng Trọng Hợp",
                             IsStudent = false,
                             PhoneNumber = "0901234567",
                             Position = "Giảng viên",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6740)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6085)
                         },
                         new
                         {
                             Id = 2,
                             AcademicTitle = "PGS",
                             AvatarUrl = "/images/author2.jpg",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6742),
-                            Degree = "ThS",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6087),
+                            Degree = "TS",
                             Email = "tranthib@example.com",
-                            FullName = "Trần Thị B",
+                            FullName = "Phạm Văn Hà",
                             IsStudent = false,
                             PhoneNumber = "0902345678",
                             Position = "Giảng viên",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6743)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6087)
                         },
                         new
                         {
                             Id = 3,
                             AcademicTitle = "",
                             AvatarUrl = "/images/author3.jpg",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6744),
-                            Degree = "CN",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6089),
+                            Degree = "Ths",
                             Email = "levanc@example.com",
-                            FullName = "Lê Văn C",
+                            FullName = "Lê Thị Anh",
                             IsStudent = true,
                             PhoneNumber = "0913456789",
-                            Position = "Sinh viên",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6745)
+                            Position = "Giảng viên",
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6089)
                         },
                         new
                         {
                             Id = 4,
                             AcademicTitle = "",
                             AvatarUrl = "/images/author4.jpg",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6746),
-                            Degree = "ThS",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6091),
+                            Degree = "CN",
                             Email = "phamthid@example.com",
-                            FullName = "Phạm Thị D",
+                            FullName = "Võ Quang Minh",
                             IsStudent = true,
                             PhoneNumber = "0934567890",
                             Position = "Nghiên cứu sinh",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6747)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6091)
                         },
                         new
                         {
                             Id = 5,
                             AcademicTitle = "",
                             AvatarUrl = "/images/author5.jpg",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6748),
-                            Degree = "CN",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6093),
+                            Degree = "Ths",
                             Email = "dovane@example.com",
-                            FullName = "Đỗ Văn E",
+                            FullName = "Hoàng Quang Huy",
                             IsStudent = true,
                             PhoneNumber = "0987654321",
-                            Position = "Sinh viên",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6749)
+                            Position = "Giảng viên",
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6093)
                         });
                 });
 
@@ -178,42 +178,77 @@ namespace Infrastructure.Migrations
                         {
                             Id = 1,
                             CategoryName = "Khoa học máy tính",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6512),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5822),
                             Description = "Lĩnh vực CNTT",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6513)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5823)
                         },
                         new
                         {
                             Id = 2,
                             CategoryName = "Trí tuệ nhân tạo",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6514),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5824),
                             Description = "AI và Machine Learning",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6514)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5825)
                         },
                         new
                         {
                             Id = 3,
                             CategoryName = "Kỹ thuật phần mềm",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6516),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5826),
                             Description = "Thiết kế và phát triển phần mềm",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6516)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5827)
                         },
                         new
                         {
                             Id = 4,
                             CategoryName = "An toàn thông tin",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6517),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5828),
                             Description = "Bảo mật hệ thống",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6517)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5828)
                         },
                         new
                         {
                             Id = 5,
                             CategoryName = "Hệ thống thông tin",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6518),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5829),
                             Description = "Phân tích và quản lý thông tin",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6519)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5830)
                         });
+                });
+
+            modelBuilder.Entity("Domain.Entities.Contact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contact", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Product", b =>
@@ -226,6 +261,10 @@ namespace Infrastructure.Migrations
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -275,35 +314,38 @@ namespace Infrastructure.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6612),
+                            Content = "",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5884),
                             Description = "Ứng dụng quản lý sách, mượn-trả",
                             Image = "library.png",
                             Level = "Đại học",
                             ManagerId = 1,
                             Status = "Đã duyệt",
                             Title = "Hệ thống quản lý thư viện",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6613),
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5885),
                             View = 100
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 2,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6615),
+                            Content = "",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5887),
                             Description = "Dự án ứng dụng OpenCV và Python",
                             Image = "face_ai.png",
-                            Level = "Thạc sĩ",
+                            Level = "Quốc gia",
                             ManagerId = 2,
-                            Status = "Chờ duyệt",
+                            Status = "Đã duyệt",
                             Title = "Nhận diện khuôn mặt bằng AI",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6616),
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5888),
                             View = 75
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 5,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6618),
+                            Content = "",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5890),
                             Description = "Thống kê, khai thác dữ liệu truy cập",
                             Image = "analytics.png",
                             Level = "Đại học",
@@ -311,36 +353,84 @@ namespace Infrastructure.Migrations
                             RejectReason = "Thiếu dữ liệu thực nghiệm",
                             Status = "Bị từ chối",
                             Title = "Phân tích hành vi người dùng Web",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6618),
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5890),
                             View = 30
                         },
                         new
                         {
                             Id = 4,
                             CategoryId = 3,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6620),
+                            Content = "",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5893),
                             Description = "Quản lý chứng chỉ học tập minh bạch",
                             Image = "blockchain.png",
-                            Level = "Tiến sĩ",
+                            Level = "Quốc gia",
                             ManagerId = 4,
                             Status = "Đã duyệt",
                             Title = "Ứng dụng Blockchain trong giáo dục",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6621),
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5893),
                             View = 55
                         },
                         new
                         {
                             Id = 5,
                             CategoryId = 4,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6623),
+                            Content = "",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5927),
                             Description = "Sử dụng Machine Learning phát hiện tấn công",
                             Image = "ids.png",
-                            Level = "Thạc sĩ",
+                            Level = "Quốc gia",
                             ManagerId = 5,
-                            Status = "Chờ duyệt",
+                            Status = "Đã duyệt",
                             Title = "Hệ thống cảnh báo xâm nhập mạng",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6623),
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5928),
                             View = 90
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryId = 1,
+                            Content = "",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5930),
+                            Description = "Cung cấp bài tập, ví dụ thực hành và đánh giá tiến độ học",
+                            Image = "csharp_learning.png",
+                            Level = "Quốc gia",
+                            ManagerId = 2,
+                            Status = "Đã duyệt",
+                            Title = "Phần mềm hỗ trợ học tập lập trình C#",
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5930),
+                            View = 200
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryId = 5,
+                            Content = "",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5932),
+                            Description = "Dự đoán và tối ưu hóa luồng giao thông sử dụng dữ liệu thực tế",
+                            Image = "traffic_simulation.png",
+                            Level = "Tiến sĩ",
+                            ManagerId = 2,
+                            RejectReason = "Thiếu tài liệu minh chứng",
+                            Status = "Từ chối",
+                            Title = "Mô hình mô phỏng giao thông đô thị",
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5933),
+                            View = 67
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryId = 2,
+                            Content = "",
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5935),
+                            Description = "Cho phép sinh viên, giảng viên đăng và tải tài liệu miễn phí",
+                            Image = "academic_platform.png",
+                            Level = "Đại học",
+                            ManagerId = 4,
+                            Status = "Đã duyệt",
+                            Title = "Nền tảng chia sẻ tài liệu học thuật",
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5935),
+                            View = 310
                         });
                 });
 
@@ -460,6 +550,26 @@ namespace Infrastructure.Migrations
                         {
                             ProductId = 5,
                             TagId = 5
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            TagId = 6
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            TagId = 7
+                        },
+                        new
+                        {
+                            ProductId = 7,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            TagId = 6
                         });
                 });
 
@@ -489,16 +599,16 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6309),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5637),
                             RoleName = "Admin",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6327)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5648)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6328),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5650),
                             RoleName = "Manager",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6329)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5651)
                         });
                 });
 
@@ -528,37 +638,51 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6541),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5851),
                             Name = "Trí tuệ nhân tạo",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6542)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5852)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6545),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5853),
                             Name = "Học máy",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6545)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5853)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6547),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5854),
                             Name = "An ninh mạng",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6547)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5855)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6548),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5856),
                             Name = "Cơ sở dữ liệu",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6548)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5856)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6549),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5857),
                             Name = "Phát triển Web",
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6550)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5858)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5859),
+                            Name = "Phần mềm giáo dục",
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5859)
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5860),
+                            Name = "Hệ thống thông tin",
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5861)
                         });
                 });
 
@@ -602,51 +726,51 @@ namespace Infrastructure.Migrations
                         {
                             Id = 1,
                             ContentType = "application/pdf",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6698),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6045),
                             Data = new byte[] { 1, 2, 3 },
                             FileName = "thu-vien.pdf",
                             ProductId = 1,
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6699)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6046)
                         },
                         new
                         {
                             Id = 2,
                             ContentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6703),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6050),
                             Data = new byte[] { 4, 5, 6 },
                             FileName = "ai-project.docx",
                             ProductId = 2,
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6703)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6050)
                         },
                         new
                         {
                             Id = 3,
                             ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6706),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6053),
                             Data = new byte[] { 7, 8, 9 },
                             FileName = "phan-tich-web.xlsx",
                             ProductId = 3,
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6706)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6053)
                         },
                         new
                         {
                             Id = 4,
                             ContentType = "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6709),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6056),
                             Data = new byte[] { 10, 11, 12 },
                             FileName = "blockchain.pptx",
                             ProductId = 4,
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6709)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6056)
                         },
                         new
                         {
                             Id = 5,
                             ContentType = "application/pdf",
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6711),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6059),
                             Data = new byte[] { 13, 14, 15 },
                             FileName = "bao-mat.pdf",
                             ProductId = 5,
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6712)
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(6060)
                         });
                 });
 
@@ -692,56 +816,56 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6478),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5791),
                             Email = "admin1@example.com",
                             Password = "admin123",
                             RoleId = 1,
                             Status = 1,
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6479),
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5792),
                             UserName = "admin01"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6481),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5794),
                             Email = "manager1@example.com",
                             Password = "manager123",
                             RoleId = 2,
                             Status = 1,
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6481),
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5794),
                             UserName = "manager01"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6483),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5796),
                             Email = "admin2@example.com",
                             Password = "admin456",
                             RoleId = 1,
                             Status = 1,
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6483),
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5796),
                             UserName = "admin02"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6484),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5798),
                             Email = "manager2@example.com",
                             Password = "manager456",
                             RoleId = 2,
                             Status = 1,
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6485),
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5798),
                             UserName = "manager02"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6486),
+                            CreatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5799),
                             Email = "admin3@example.com",
                             Password = "admin789",
                             RoleId = 1,
                             Status = 0,
-                            UpdatedAt = new DateTime(2025, 5, 7, 0, 40, 20, 430, DateTimeKind.Local).AddTicks(6486),
+                            UpdatedAt = new DateTime(2025, 5, 13, 0, 39, 48, 336, DateTimeKind.Local).AddTicks(5800),
                             UserName = "admin03"
                         });
                 });

@@ -49,7 +49,7 @@ namespace SICT_ShowCase.Controllers
 
             var author = _mapper.Map<Author>(dto);
             await _authorService.AddAuthorAsync(author);
-            return Ok();
+            return Ok(author);
         }
 
         // PUT: api/author/{id}
@@ -61,7 +61,7 @@ namespace SICT_ShowCase.Controllers
 
             var author = _mapper.Map<Author>(dto);
             await _authorService.UpdateAuthorAsync(author);
-            return Ok();
+            return Ok(author);
         }
 
         // DELETE: api/author/{id}

@@ -370,6 +370,120 @@
         }
       }
     },
+    "/api/Contact": {
+      "get": {
+        "tags": [
+          "Contact"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Contact"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Contact"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Contact/{id}": {
+      "get": {
+        "tags": [
+          "Contact"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Contact"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Product/add-product": {
       "post": {
         "tags": [
@@ -435,6 +549,67 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Product/admin-listproduct": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Product/featured-product": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Product/search-product": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "tagId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -951,6 +1126,27 @@
             "description": "OK"
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "UploadFile"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/UploadFile/byProductId/{id}": {
@@ -1167,6 +1363,10 @@
           },
           "isStudent": {
             "type": "boolean"
+          },
+          "createAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -1205,9 +1405,17 @@
           "isStudent": {
             "type": "boolean"
           },
+          "createAt": {
+            "type": "string",
+            "format": "date-time"
+          },
           "id": {
             "type": "integer",
             "format": "int32"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -1222,6 +1430,10 @@
           "description": {
             "type": "string",
             "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -1237,9 +1449,55 @@
             "type": "string",
             "nullable": true
           },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
           "id": {
             "type": "integer",
             "format": "int32"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "productCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ContactDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -1269,6 +1527,10 @@
             "type": "string",
             "nullable": true
           },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
           "image": {
             "type": "string",
             "nullable": true
@@ -1292,6 +1554,26 @@
           "level": {
             "type": "string",
             "nullable": true
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -1307,6 +1589,10 @@
             "type": "string",
             "nullable": true
           },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
           "image": {
             "type": "string",
             "nullable": true
@@ -1331,13 +1617,33 @@
             "type": "string",
             "nullable": true
           },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
           "id": {
             "type": "integer",
             "format": "int32"
           },
-          "rejectReason": {
+          "updatedAt": {
             "type": "string",
-            "nullable": true
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -1372,6 +1678,10 @@
           "name": {
             "type": "string",
             "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -1386,6 +1696,10 @@
           "name": {
             "type": "string",
             "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false

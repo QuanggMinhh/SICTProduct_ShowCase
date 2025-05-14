@@ -1,4 +1,5 @@
-﻿using Application.Services.Interfaces;
+﻿using Application.Services.Implementations;
+using Application.Services.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -58,6 +59,17 @@ namespace SICT_ShowCase.Controllers
         {
             var files = await _uploadFileService.GetFilesByProductIdAsync(id);
             return Ok(files);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteFile(int id)
+        {
+            var file = await _uploadFileService.GetUploadFileByIdAsync(id);
+            if (file == null)
+                return NotFound();
+
+            await _uploadFileService.DeleteUploadFileAsync(id);
+            return Ok("Success");
         }
     }
 }

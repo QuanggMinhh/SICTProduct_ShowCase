@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SICT_ShowCase.Controllers
 {
-    [Authorize]
-    [Authorize(Roles = "Admin")]
+    //[Authorize]
+    //[Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -37,7 +37,7 @@ namespace SICT_ShowCase.Controllers
         {
             var user = _mapper.Map<User>(userDto);
             await _userService.AddUserAsync(user);
-            return Ok();
+            return Ok(user);
         }
 
         [HttpGet]
@@ -56,7 +56,7 @@ namespace SICT_ShowCase.Controllers
                 return BadRequest();
             }
             await _userService.DeleteUserAsync(user.Id);
-            return Ok();
+            return Ok(user);
         }
 
         [HttpPut]
@@ -71,7 +71,7 @@ namespace SICT_ShowCase.Controllers
             userDto.RoleId = user.RoleId;
             var updateUser = _mapper.Map<User>(userDto);
             await _userService.UpdateUserAsync(updateUser);
-            return Ok();
+            return Ok(user);
         }
     }
 }

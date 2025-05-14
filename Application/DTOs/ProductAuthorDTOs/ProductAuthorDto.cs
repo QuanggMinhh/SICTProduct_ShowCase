@@ -10,5 +10,7 @@ namespace Application.DTOs.ProductAuthorDTOs
     {
         public int ProductId { get; set; }
         public int AuthorId { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }
